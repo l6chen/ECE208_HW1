@@ -30,9 +30,9 @@ def find_LCAs(parent):
         for pu in parent[u]:
             LCA[u][v] = LCA[u][v] | lca(pu,v)
             
-        for pu in parent[u]:
-            for pv in parent[v]:
-                LCA[u][v] = LCA[u][v] | lca(pu,pv)
+#         for pu in parent[u]:#dummy
+#             for pv in parent[v]:
+#                 LCA[u][v] = LCA[u][v] | lca(pu,pv)
         
         subtract = set()
         for a in LCA[u][v]:
